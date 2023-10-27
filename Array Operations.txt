@@ -1,0 +1,63 @@
+Algorithme ex50
+Fonction Sommme ( T : Tableau réel ) 
+Variables               s : réel
+                        i: entier
+
+Début:
+S <-- 0
+Pour i <-- 0 à 9 pas 1 faire
+S <- - S + T (i)
+fin Pour
+fin
+
+Fonction Produit ( T : Tableau réel ) 
+Variables:              P: réel
+                        i: entier
+Début
+P <-- 1
+Pour i <-- 0 à 9 pas 1 faire
+P <-- P * T (i)
+fin Pour
+Retourne P
+Fin
+
+Fonction Moyenne ( T : Tableau réel )
+Variables:              M, s: réel
+
+Début
+S <-- Somme ( T )
+M <-- S / 10
+Retourne M
+Fin
+
+Procedure sign ( T : Tableau réel )
+Variable:           i: entier
+Début
+Ecrire (" Les éléments positifs du tableau sont : ")
+Pour i <-- 0 à 9 pas 1 faire 
+si T (i) > 0 alors
+Ecrire ( T ( i ) )
+fin si
+fin pour
+
+Ecrire (" Les éléments negatifs du tableau sont : ")
+Pour i <-- 0 à 9 pas 1 faire 
+si T (i) < 0 alors
+Ecrire ( T ( i ) )
+fin si
+fin Pour
+fin
+
+Variables:
+Tableau T ( 10 ) : réel
+i : entier
+
+debut:
+Pour i <-- 0 à 9 pas 1 faire
+Ecrire (" Donner l'élément : ", i + 1 , " : " )
+Lire ( T ( i ) )
+fin Pour
+Ecrire ( " La somme des éléments du tableau est : " somme(T))
+Ecrire ( " Le produit des éléments du tableau est : " produit(T))
+Ecrire ( " La moyenne des éléments du tableau est : " moyenne(T))
+Ecrire (sign(T))
